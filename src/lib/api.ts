@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// O endereço do seu backend.
-const VITE_API_URL = 'http://localhost:3000/api';
+// O endereço do seu backend no Vercel.
+const VITE_API_URL = import.meta.env.VITE_API_URL || 'https://backendapi-hazet-eight.vercel.app/api';
 
 const api = axios.create({
   baseURL: VITE_API_URL,
